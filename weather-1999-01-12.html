@@ -1,7 +1,36 @@
 <!doctype html>
 <html lang="ru">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Метеорологическая сводка — Архив Северного района</title><link rel="stylesheet" href="site.css"><style>
-.item-layout{padding:22px 0 42px}.item-card,.doc-view{background:#fff;border:1px solid #c8c8c4;padding:20px;margin-bottom:18px}.meta-table{border-collapse:collapse;width:100%;max-width:760px;margin-top:15px}.meta-table th,.meta-table td{border-top:1px solid #ddd;padding:7px 8px;text-align:left}.meta-table th{width:210px;background:#f6f6f3;color:#666;font-weight:normal}.scan{width:min(820px,100%);margin:auto;background:#eee9dc;border:1px solid #9a968b;padding:40px 46px;color:#222;font-family:'Courier New',monospace;box-shadow:0 3px 12px rgba(0,0,0,.18)}.scan h2{text-align:center;margin:0 0 4px;font-size:22px}.scan .sub{text-align:center;margin-bottom:24px}.scan table{width:100%;border-collapse:collapse;font-size:13px}.scan th,.scan td{border:1px solid #666;padding:6px;text-align:center}.scan .notes{margin-top:20px;font-size:13px;line-height:1.6}.stamp{display:inline-block;border:2px solid #777;padding:6px 10px;transform:rotate(-2deg);margin-top:18px;color:#555}.doc-view{background:#777;padding:22px}@media(max-width:700px){.scan{min-width:700px}.doc-view{overflow:auto;padding:8px}}</style></head>
+.doc-view{background:#74736f;padding:24px;overflow:auto}
+.scan{
+  position:relative;
+  width:780px;
+  min-height:980px;
+  margin:auto;
+  background:
+    radial-gradient(ellipse at 70% 18%,rgba(255,255,255,.18),transparent 33%),
+    linear-gradient(90deg,rgba(60,49,30,.04),transparent 8%,transparent 93%,rgba(60,49,30,.05)),
+    #d8d0bd;
+  border:1px solid #a79f8c;
+  padding:42px 48px;
+  color:#2e2b25;
+  font-family:"Courier New",monospace;
+  box-shadow:0 4px 16px rgba(0,0,0,.32);
+  filter:grayscale(.72) contrast(.93)
+}
+.scan::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.28;mix-blend-mode:multiply;
+  background:radial-gradient(circle,rgba(40,35,28,.18) 0 .5px,transparent .75px);
+  background-size:8px 8px
+}
+.scan h2{text-align:center;margin:0 0 4px;font-size:21px}
+.scan .sub{text-align:center;margin-bottom:24px}
+.scan table{width:100%;border-collapse:collapse;font-size:13px}
+.scan th,.scan td{border:1px solid #68645a;padding:6px;text-align:center}
+.scan .notes{margin-top:20px;font-size:13px;line-height:1.55}
+.stamp{display:inline-block;border:2px solid #777166;padding:6px 10px;transform:rotate(-2deg);margin-top:18px;color:#5f5a50}
+@media(max-width:700px){.scan{min-width:700px}.doc-view{padding:8px}}
+</style></head>
 <body>
 <header class="masthead"><div class="shell masthead__inner"><div><div class="institution">Архив Северного района</div><div class="subtitle">Электронный каталог оцифрованных материалов</div></div><div class="edition">карточка материала</div></div></header>
 <nav class="navline"><div class="shell navline__inner"><a href="index.html">← Каталог</a><a href="weather-1999-01-12.html" aria-current="page">Документы</a></div></nav>

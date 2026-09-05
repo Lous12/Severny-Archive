@@ -30,9 +30,17 @@
       <button id="prev">← предыдущая</button>
       <strong>Страница <span id="pageNo">1</span> из 4</strong>
       <button id="next">следующая →</button>
+      <label class="zoom-label">Масштаб
+        <select id="zoom" aria-label="Масштаб страницы">
+          <option value="0.75">75%</option>
+          <option value="0.9" selected>90%</option>
+          <option value="1">100%</option>
+          <option value="1.15">115%</option>
+        </select>
+      </label>
     </div>
 
-    <div class="scan-stage">
+    <div class="scan-stage"><div class="scan-wrap">
       <section class="newspaper-page active" data-page="1">
         <div class="np-topline"><span>Цена 2 руб.</span><span>Суббота, 16 января 1999 года</span><span>№ 4 (1847)</span></div>
         <header class="np-head"><div class="np-kicker">ОБЩЕСТВЕННО-ПОЛИТИЧЕСКАЯ ГАЗЕТА СЕВЕРНОГО РАЙОНА</div><div class="np-title">СЕВЕРНЫЙ ВЕСТНИК</div><div class="np-rule"></div></header>
@@ -70,7 +78,7 @@
             <p><b>Северное направление — повышенный тариф.</b></p>
           </aside>
         </div>
-        <div class="np-footer">СЕВЕРНЫЙ ВЕСТНИК · 1</div>
+        <div class="np-footer"><span class="print-info">Главный редактор Н. В. Савельев · Отпечатано в районной типографии · Тираж 4 850 экз. · Заказ № 117</span><span>1</span></div>
       </section>
 
       <section class="newspaper-page" data-page="2">
@@ -96,7 +104,7 @@
           </article>
           <aside class="span-2 np-box"><h3>КРАТКО</h3><p>В воскресенье в клубе посёлка Заречный состоится семейный вечер. Начало в 17 часов.</p><p>Почтовое отделение № 1 переходит на зимний график работы.</p></aside>
         </div>
-        <div class="np-footer">СЕВЕРНЫЙ ВЕСТНИК · 2</div>
+        <div class="np-footer"><span class="print-info">Адрес редакции: п. Северный, ул. Советская, 14 · Тел. редакции 2-18-43</span><span>2</span></div>
       </section>
 
       <section class="newspaper-page" data-page="3">
@@ -122,7 +130,7 @@
           </article>
           <aside class="span-2 np-box"><h3>ОБЪЯВЛЕНИЕ</h3><p>Предприятиям района необходимо до 25 января представить сведения о резервных источниках питания.</p><p>Справки по телефону редакции.</p></aside>
         </div>
-        <div class="np-footer">СЕВЕРНЫЙ ВЕСТНИК · 3</div>
+        <div class="np-footer"><span class="print-info">Материалы читателей принимаются ежедневно, кроме воскресенья. Рукописи не возвращаются.</span><span>3</span></div>
       </section>
 
       <section class="newspaper-page" data-page="4">
@@ -139,12 +147,16 @@
           <article class="span-3"><h3 class="np-section">НАШ КАЛЕНДАРЬ</h3><div class="columns columns-2"><p>Световой день постепенно увеличивается. По данным метеослужбы, в конце января продолжительность дня составит почти семь часов.</p><p>Синоптики не исключают нового похолодания во второй половине месяца.</p></div></article>
           <aside class="span-2 np-box"><h3>РЕДАКЦИЯ</h3><p>Материалы читателей принимаются ежедневно, кроме воскресенья. Рукописи не рецензируются и не возвращаются.</p></aside>
         </div>
-        <div class="np-footer">СЕВЕРНЫЙ ВЕСТНИК · 4</div>
+        <div class="np-footer"><span class="print-info">Учредитель: районный совет · Индекс 52914 · Цена свободная</span><span>4</span></div>
       </section>
-    </div>
+    </div></div>
   </section>
 </main>
 <footer><div class="shell footer__inner"><span>Архив Северного района</span><span>Фонд П-17</span></div></footer>
+<!--
+Служебная пометка оцифровщика:
+поля номера сверены с бумажным экземпляром. Лист 4 имеет следы повторного прошивания.
+-->
 <script src="viewer.js"></script>
 </body>
 </html>
