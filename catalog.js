@@ -1,28 +1,32 @@
+
 (() => {
   const search = document.getElementById('search');
+  const filters = [...document.querySelectorAll('.filter')];
   const records = [...document.querySelectorAll('.record')];
-  const buttons = [...document.querySelectorAll('.filter')];
   const empty = document.getElementById('empty');
-  let filter = 'all';
+  let activeKind = 'all';
 
-  function update(){
-    const q = search.value.trim().toLowerCase();
-    let shown = 0;
-    for(const record of records){
-      const kindOk = filter === 'all' || record.dataset.kind === filter;
-      const searchOk = !q || (record.dataset.search || '').toLowerCase().includes(q) || record.textContent.toLowerCase().includes(q);
-      const visible = kindOk && searchOk;
-      record.hidden = !visible;
-      if(visible) shown++;
-    }
-    empty.hidden = shown !== 0;
+  function apply(){
+    const q = (search?.value || '').trim().toLowerCase();
+    let visible = 0;
+    records.forEach(card => {
+      const kind = card.dataset.kind || '';
+      const hay = ((card.dataset.search || '') + ' ' + card.textContent).toLowerCase();
+      const matchKind = activeKind === 'all' || kind === activeKind;
+      const matchText = !q || hay.includes(q);
+      const show = matchKind && matchText;
+      card.style.display = show ? '' : 'none';
+      if(show) visible++;
+    });
+    if(empty) empty.style.display = visible ? 'none' : 'block';
   }
 
-  search.addEventListener('input', update);
-  buttons.forEach(btn => btn.addEventListener('click', () => {
-    buttons.forEach(x => x.classList.remove('active'));
-    btn.classList.add('active');
-    filter = btn.dataset.filter;
-    update();
+  filters.forEach(btn => btn.addEventListener('click', () => {
+    activeKind = btn.dataset.kind || 'all';
+    filters.forEach(b => b.classList.toggle('active', b === btn));
+    apply();
   }));
+
+  if(search) search.addEventListener('input', apply);
+  apply();
 })();
