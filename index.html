@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Электронный каталог оцифрованных материалов Архива Северного района.">
+  <title>Архив Северного района — электронный каталог</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="shell masthead__inner">
+      <div>
+        <div class="institution">Архив Северного района</div>
+        <div class="subtitle">Электронный каталог оцифрованных материалов</div>
+      </div>
+      <div class="edition">версия каталога 1.0</div>
+    </div>
+  </header>
+
+  <nav class="navline">
+    <div class="shell navline__inner">
+      <a href="index.html" aria-current="page">Каталог</a>
+      <a href="#collections">Фонды</a>
+      <a href="#about">О проекте</a>
+    </div>
+  </nav>
+
+  <main class="shell layout">
+    <aside class="sidebar">
+      <section class="sidebox">
+        <h2>Поиск по каталогу</h2>
+        <label for="search">Название, дата, фонд</label>
+        <input id="search" type="search" placeholder="например: 1999">
+      </section>
+
+      <section class="sidebox" id="collections">
+        <h2>Тип материала</h2>
+        <div class="filters" role="group" aria-label="Фильтр по типу материала">
+          <button class="filter active" data-filter="all">Все материалы</button>
+          <button class="filter" data-filter="periodical">Периодика</button>
+          <button class="filter" data-filter="document">Документы</button>
+          <button class="filter" data-filter="photo">Фотографии</button>
+          <button class="filter" data-filter="map">Карты и схемы</button>
+          <button class="filter" data-filter="audio">Аудиозаписи</button>
+          <button class="filter" data-filter="video">Видеоматериалы</button>
+        </div>
+      </section>
+
+      <section class="sidebox small">
+        <h2>Справка</h2>
+        <p>Материалы публикуются по мере оцифровки фондов. Качество отдельных копий зависит от состояния оригинала.</p>
+      </section>
+    </aside>
+
+    <section class="content">
+      <div class="crumbs">Главная / Электронный каталог</div>
+      <h1>Последние оцифрованные материалы</h1>
+      <p class="intro">В каталоге представлены периодические издания, служебные документы, фотографии и иные материалы из районных фондов.</p>
+
+      <div class="catalog" id="catalog">
+        <article class="record" data-kind="periodical" data-search="северный вестник 4 1847 16 января 1999 периодика фонд п-17 газета">
+          <div class="record__icon">П</div>
+          <div class="record__body">
+            <div class="record__meta">Периодика · Фонд П-17 · 16.01.1999</div>
+            <h2><a href="issue-1999-04.html">«Северный вестник», № 4 (1847)</a></h2>
+            <p>Районная общественно-политическая газета. В выпуске: работа котельной № 2, ограничение движения по трассе Р-18, школьные новости, спорт, объявления.</p>
+            <div class="record__bottom"><span>4 страницы</span><span>Качество: удовлетворительное</span></div>
+          </div>
+        </article>
+
+        <article class="record" data-kind="document" data-search="метеорологическая сводка 12 января 1999 метеопост 3 фонд м-04 погода документ">
+          <div class="record__icon">Д</div>
+          <div class="record__body">
+            <div class="record__meta">Документ · Фонд М-04 · 12.01.1999</div>
+            <h2><a href="weather-1999-01-12.html">Метеорологическая сводка метеопоста № 3</a></h2>
+            <p>Суточные наблюдения за температурой, ветром, осадками и видимостью в северной части района.</p>
+            <div class="record__bottom"><span>2 листа</span><span>Качество: хорошее</span></div>
+          </div>
+        </article>
+
+        <article class="record muted-record" data-kind="document" data-search="дорожная служба р-18 15 января 1999 распоряжение транспорт">
+          <div class="record__icon">Д</div>
+          <div class="record__body">
+            <div class="record__meta">Документ · Фонд Д-11 · 15.01.1999</div>
+            <h2>Распоряжение дорожной службы по трассе Р-18</h2>
+            <p>О временном ограничении грузового движения на северном участке трассы.</p>
+            <div class="record__bottom"><span>Оцифровка ожидается</span></div>
+          </div>
+        </article>
+
+        <article class="record muted-record" data-kind="photo" data-search="котельная 2 фотография январь 1999 фонд ф-08">
+          <div class="record__icon">Ф</div>
+          <div class="record__body">
+            <div class="record__meta">Фотография · Фонд Ф-08 · январь 1999</div>
+            <h2>Котельная № 2 после ремонтных работ</h2>
+            <p>Общий вид здания и участка теплотрассы со стороны хозяйственного двора.</p>
+            <div class="record__bottom"><span>Оцифровка ожидается</span></div>
+          </div>
+        </article>
+
+        <article class="record muted-record" data-kind="map" data-search="схема районных линий связи 1998 карта узлы связи">
+          <div class="record__icon">К</div>
+          <div class="record__body">
+            <div class="record__meta">Карта / схема · Фонд С-02 · 1998</div>
+            <h2>Схема районных линий связи</h2>
+            <p>Рабочая схема узлов и ретрансляционных линий районной сети.</p>
+            <div class="record__bottom"><span>Оцифровка ожидается</span></div>
+          </div>
+        </article>
+
+        <article class="record muted-record" data-kind="audio" data-search="радиообмен служба снабжения р-18 январь 1999 аудио">
+          <div class="record__icon">А</div>
+          <div class="record__body">
+            <div class="record__meta">Аудиозапись · Фонд Р-06 · январь 1999</div>
+            <h2>Радиообмен службы снабжения, маршрут Р-18</h2>
+            <p>Фрагмент рабочей записи диспетчерской частоты.</p>
+            <div class="record__bottom"><span>Оцифровка ожидается</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="empty" id="empty" hidden>По заданным условиям ничего не найдено.</div>
+
+      <section class="about" id="about">
+        <h2>О проекте оцифровки</h2>
+        <p>Электронный каталог создан для систематизации материалов районных фондов и предоставления доступа к цифровым копиям документов. Сведения в карточках воспроизводят архивные описи; отдельные наименования и даты могут уточняться в ходе обработки.</p>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer__inner">
+      <span>Архив Северного района</span>
+      <span>Электронный каталог</span>
+    </div>
+  </footer>
+  <script src="catalog.js"></script>
+</body>
+</html>
